@@ -78,7 +78,7 @@
         // asynchronous without having to worry about deferred management.
         this.handlers[action] = wrap(options[action], action);
 
-      }, this);
+      }.bind(this));
 
       // Transition function given that this is a terminal storyboard.
       this.to = leaf_to;
@@ -105,7 +105,7 @@
         this[name] = prop;
       }
 
-    }, this);
+    }.bind(this));
 
   };
 
@@ -156,7 +156,7 @@
         if (this.scenes) {
           _.each(this.scenes , function(scene) {
             scene.attach(scene.name, this);
-          }, this);
+          }.bind(this));
         }
       }
       return this;
