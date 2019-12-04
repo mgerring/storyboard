@@ -47,7 +47,7 @@
   },
 
   "dependencies": {
-    "lodash": "0.9.1",
-    "underscore.deferred": "0.2.0"
+    "lodash": "4.17",
+    "underscore.deferred": "0.4.0"
   }
 } 
