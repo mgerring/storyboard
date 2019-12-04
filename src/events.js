@@ -29,7 +29,7 @@
       if (this._events && this._events[name]) {
         _.each(this._events[name], function(subscription) {
           subscription.callback.apply(subscription.context || this, args);
-        }, this);
+        }.bind(this));
       }
       return this;
     },
